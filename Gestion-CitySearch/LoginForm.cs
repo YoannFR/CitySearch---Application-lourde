@@ -21,7 +21,20 @@ namespace Gestion_CitySearch
             InitializeComponent();
         }
 
-        private async void btn_connexion_Click(object sender, EventArgs e)
+        private void btn_connexion_Click(object sender, EventArgs e)
+        {
+            log();
+        }
+
+        private void txtbox_password_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                log();
+            }
+        }
+
+        private async void log()
         {
             Utilisateur utilisateur = new Utilisateur(txtbox_username.Text, txtbox_password.Text);
             bool result = await ApiUtilisateur.Login(utilisateur);
@@ -39,6 +52,5 @@ namespace Gestion_CitySearch
                 MetroMessageBox.Show(this, "Oups, erreur de connexion.", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             };
         }
-
     }
 }

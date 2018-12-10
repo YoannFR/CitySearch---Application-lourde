@@ -113,6 +113,7 @@
             this.txtbox_password.UseSelectable = true;
             this.txtbox_password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtbox_password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtbox_password.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtbox_password_KeyUp);
             // 
             // btn_connexion
             // 
