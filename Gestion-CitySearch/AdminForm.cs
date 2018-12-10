@@ -22,8 +22,8 @@ namespace Gestion_CitySearch
 
         private async void AdminForm_Load(object sender, EventArgs e)
         {
+            metroTabControl1.SelectedTab = metroTabPage1;
             JObject response = await ApiStatistique.getStatistiques();
-
             if (response != null)
             {
                 // Statistique - Utilisateurs
@@ -45,10 +45,38 @@ namespace Gestion_CitySearch
                 lbl_bdd.Text = (int)response["espaceDD"] + "% du disque utilisé";
 
                 // Remplissage des DGV
-                dgv_Utilisateurs.DataSource = await ApiUtilisateur.getUsers();
-                dgv_Objectifs.DataSource = await ApiObjectif.getObjectifs();
-                dgv_Tournois.DataSource = await ApiTournoi.getTournois();
-                dgv_Articles.DataSource = await ApiArticle.getArticles();
+                try
+                {
+                    dgv_Utilisateurs.DataSource = await ApiUtilisateur.getUsers();
+                }
+                catch
+                {
+                    lbUserErreur.Visible = true;
+                }
+                try
+                {
+                    dgv_Objectifs.DataSource = await ApiObjectif.getObjectifs();
+                }
+                catch
+                {
+                    lbObjectifsErreur.Visible = true;
+                }
+                try
+                {
+                    dgv_Tournois.DataSource = await ApiTournoi.getTournois();
+                }
+                catch
+                {
+                    lbTournoisErreur.Visible = true;
+                }
+                try
+                {
+                    dgv_Articles.DataSource = await ApiArticle.getArticles();
+                }
+                catch
+                {
+                    lbArticlesErreur.Visible = true;
+                }
             }
         }
 

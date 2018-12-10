@@ -39,5 +39,6 @@ namespace Gestion_CitySearch
                 MetroMessageBox.Show(this, "Oups, erreur de connexion.", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             };
         }
+
     }
 }

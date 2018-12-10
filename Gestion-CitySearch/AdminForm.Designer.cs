@@ -111,6 +111,10 @@
             this.btn_ModifierArticle = new MetroFramework.Controls.MetroButton();
             this.btn_AjouterArticle = new MetroFramework.Controls.MetroButton();
             this.dgv_Articles = new MetroFramework.Controls.MetroGrid();
+            this.lbUserErreur = new MetroFramework.Controls.MetroLabel();
+            this.lbTournoisErreur = new MetroFramework.Controls.MetroLabel();
+            this.lbObjectifsErreur = new MetroFramework.Controls.MetroLabel();
+            this.lbArticlesErreur = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -141,6 +145,7 @@
             this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(898, 415);
             this.metroTabControl1.TabIndex = 0;
+            this.metroTabControl1.UseCustomForeColor = true;
             this.metroTabControl1.UseSelectable = true;
             // 
             // metroTabPage1
@@ -285,6 +290,7 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.lbObjectifsErreur);
             this.metroTabPage2.Controls.Add(this.lbl_RécompenseObjectif);
             this.metroTabPage2.Controls.Add(this.lbl_RayonActivationObjectif);
             this.metroTabPage2.Controls.Add(this.lbl_LongitudeObjectif);
@@ -581,6 +587,7 @@
             // 
             // metroTabPage3
             // 
+            this.metroTabPage3.Controls.Add(this.lbTournoisErreur);
             this.metroTabPage3.Controls.Add(this.lbl_NbrePlacesTournoi);
             this.metroTabPage3.Controls.Add(this.lbl_DateFinTournoi);
             this.metroTabPage3.Controls.Add(this.lbl_RécompenseTournoi);
@@ -833,6 +840,7 @@
             // 
             // metroTabPage4
             // 
+            this.metroTabPage4.Controls.Add(this.lbUserErreur);
             this.metroTabPage4.Controls.Add(this.lbl_isAdminUtilisateur);
             this.metroTabPage4.Controls.Add(this.lbl_PasswordUtilisateur);
             this.metroTabPage4.Controls.Add(this.lbl_EmailUtilisateur);
@@ -1071,6 +1079,7 @@
             // 
             // metroTabPage5
             // 
+            this.metroTabPage5.Controls.Add(this.lbArticlesErreur);
             this.metroTabPage5.Controls.Add(this.lbl_PhotoArticle);
             this.metroTabPage5.Controls.Add(this.lbl_DescriptionArticle);
             this.metroTabPage5.Controls.Add(this.lbl_TitreArticle);
@@ -1302,6 +1311,59 @@
             this.dgv_Articles.Size = new System.Drawing.Size(890, 184);
             this.dgv_Articles.TabIndex = 2;
             // 
+            // lbUserErreur
+            // 
+            this.lbUserErreur.AutoSize = true;
+            this.lbUserErreur.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbUserErreur.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbUserErreur.Location = new System.Drawing.Point(408, 76);
+            this.lbUserErreur.Name = "lbUserErreur";
+            this.lbUserErreur.Size = new System.Drawing.Size(148, 25);
+            this.lbUserErreur.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbUserErreur.TabIndex = 1;
+            this.lbUserErreur.Text = "Aucun Utilisateurs";
+            this.lbUserErreur.UseStyleColors = true;
+            this.lbUserErreur.Visible = false;
+            // 
+            // lbTournoisErreur
+            // 
+            this.lbTournoisErreur.AutoSize = true;
+            this.lbTournoisErreur.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbTournoisErreur.Location = new System.Drawing.Point(385, 79);
+            this.lbTournoisErreur.Name = "lbTournoisErreur";
+            this.lbTournoisErreur.Size = new System.Drawing.Size(129, 25);
+            this.lbTournoisErreur.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbTournoisErreur.TabIndex = 28;
+            this.lbTournoisErreur.Text = "Aucun Tournois";
+            this.lbTournoisErreur.UseStyleColors = true;
+            this.lbTournoisErreur.Visible = false;
+            // 
+            // lbObjectifsErreur
+            // 
+            this.lbObjectifsErreur.AutoSize = true;
+            this.lbObjectifsErreur.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbObjectifsErreur.Location = new System.Drawing.Point(372, 88);
+            this.lbObjectifsErreur.Name = "lbObjectifsErreur";
+            this.lbObjectifsErreur.Size = new System.Drawing.Size(128, 25);
+            this.lbObjectifsErreur.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbObjectifsErreur.TabIndex = 25;
+            this.lbObjectifsErreur.Text = "Aucun objectifs";
+            this.lbObjectifsErreur.UseStyleColors = true;
+            this.lbObjectifsErreur.Visible = false;
+            // 
+            // lbArticlesErreur
+            // 
+            this.lbArticlesErreur.AutoSize = true;
+            this.lbArticlesErreur.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbArticlesErreur.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbArticlesErreur.Location = new System.Drawing.Point(400, 71);
+            this.lbArticlesErreur.Name = "lbArticlesErreur";
+            this.lbArticlesErreur.Size = new System.Drawing.Size(121, 25);
+            this.lbArticlesErreur.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbArticlesErreur.TabIndex = 30;
+            this.lbArticlesErreur.Text = "Aucun Articles";
+            this.lbArticlesErreur.UseStyleColors = true;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1409,6 +1471,10 @@
         private MetroFramework.Controls.MetroLabel lbl_DescriptionArticle;
         private MetroFramework.Controls.MetroLabel lbl_TitreArticle;
         private MetroFramework.Controls.MetroLabel lbl_DateArticle;
+        private MetroFramework.Controls.MetroLabel lbUserErreur;
+        private MetroFramework.Controls.MetroLabel lbObjectifsErreur;
+        private MetroFramework.Controls.MetroLabel lbTournoisErreur;
+        private MetroFramework.Controls.MetroLabel lbArticlesErreur;
     }
 }
 
